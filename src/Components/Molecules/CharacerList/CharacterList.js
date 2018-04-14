@@ -3,8 +3,18 @@ import PropTypes from 'prop-types';
 
 export default class CharacterList extends PureComponent {
 
+    propTypes = {
+        characterList: PropTypes.array.required
+    };
+
     render() {
-        return 'CharacterList';
+        return (
+            <ul>
+                {this.props.characterList.map((characterEntry)=> {
+                    return <li>{characterEntry.name}</li>
+                })}
+            </ul>
+        );
     }
 
 }

@@ -20,8 +20,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "build-css": "node-sass-chokidar ./src/Styles/App.scss ./src/App.css",
-    "watch-css": "npm run build-css && node-sass-chokidar ./src/Styles/App.scss ./src/App.css --watch --recursive"
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src --watch --recursive"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
