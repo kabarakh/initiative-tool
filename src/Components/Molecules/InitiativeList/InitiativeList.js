@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export default class InitiativeList extends PureComponent {
 
-    render() {
-        return 'InitiativeList';
-    }
+  render() {
+    return 'InitiativeList';
+  }
 
 }

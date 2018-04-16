@@ -5,22 +5,20 @@ import InitiativeList from '../../Molecules/InitiativeList/InitiativeList';
 import FlyIn from '../../Molecules/FlyIn/FlyIn';
 import CharacterList from '../../Molecules/CharacerList/CharacterList';
 
-import './App.css';
-
 export default class InitiativeToolApp extends PureComponent {
 
-    static propTypes = {
-        characterList: PropTypes.array.isRequired
-    };
+  static propTypes = {
+    characterList: PropTypes.array.isRequired,
+  };
 
-    render() {
-        return (
-            <div className={'initiative-tool-app'}>
-                <InitiativeList />
-                <FlyIn>
-                    <CharacterList characterList={this.props.characterList}/>
-                </FlyIn>
-            </div>
-        );
-    };
+  render() {
+    return (
+        <div className={'initiative-tool-app'}>
+          <InitiativeList/>
+          <FlyIn>
+            <CharacterList characterList={this.props.characterList}/>
+          </FlyIn>
+        </div>
+    );
+  };
 };

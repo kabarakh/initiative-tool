@@ -1,27 +1,31 @@
+@import '../../../Shared/Styles/Variables';
+
 .flyin {
+  display: grid;
   position: fixed;
-  width: 260px;
   top: 0;
   right: -210px;
   bottom: 0;
   transition: right 750ms ease-in-out;
-  display: grid;
+  width: 260px;
   grid-template-columns: 40px auto;
   grid-gap: 10px;
-}
 
-.flyin.is-open {
-  right: 0;
+  &.is-open {
+    right: 0;
+  }
 }
 
 .flyin-button {
-  -webkit-appearance: none;
   border: 0;
   background: transparent;
+  // we need the vendor prefixes here to get rid of default stylings
+  -webkit-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+  -moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
 }
 
 .flyin-collapse-area {
-  box-shadow: 0 0 6px #666;
-  width: 100%;
+  box-shadow: 0 0 6px $shadow-color;
   padding: 10px;
+  width: 100%;
 }
