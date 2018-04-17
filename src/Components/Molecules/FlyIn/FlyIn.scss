@@ -3,13 +3,14 @@
 .flyin {
   display: grid;
   position: fixed;
+  width: 350px;
   top: 0;
-  right: -210px;
+  right: -300px;
   bottom: 0;
   transition: right 750ms ease-in-out;
-  width: 260px;
   grid-template-columns: 40px auto;
   grid-gap: 10px;
+  overflow-y: auto;
 
   &.is-open {
     right: 0;
