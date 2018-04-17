@@ -3,11 +3,11 @@
 .flyin {
   display: grid;
   position: fixed;
-  width: 350px;
   top: 0;
   right: -300px;
   bottom: 0;
   transition: right 750ms ease-in-out;
+  width: 350px;
   grid-template-columns: 40px auto;
   grid-gap: 10px;
   overflow-y: auto;

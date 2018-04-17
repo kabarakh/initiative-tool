@@ -11,12 +11,21 @@ export default class InitiativeToolApp extends PureComponent {
     characterList: PropTypes.array.isRequired,
   };
 
+  constructor(props) {
+      super(props);
+
+      this.state = {
+          ...props,
+          currentEncounter: []
+      };
+  }
+
   render() {
     return (
         <div className={'initiative-tool-app'}>
-          <InitiativeList/>
+          <InitiativeList currentEncounter={this.state.currentEncounter}/>
           <FlyIn>
-            <CharacterList characterList={this.props.characterList}/>
+            <CharacterList characterList={this.state.characterList}/>
           </FlyIn>
         </div>
     );
