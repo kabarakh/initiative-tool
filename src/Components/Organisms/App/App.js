@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 import clone from 'lodash.clonedeep'
+import filter from 'lodash.filter'
+import map from 'lodash.map'
 
 import InitiativeList from '../../Molecules/InitiativeList/InitiativeList'
 import FlyIn from '../../Molecules/FlyIn/FlyIn'
@@ -30,9 +31,20 @@ export default class InitiativeToolApp extends PureComponent {
     }
   }
 
-  startEncounter = () => {
+  useCharactersForEncounter = (groupName) => {
     let newState = clone(this.state)
-    newState.currentEncounter = clone(newState.characterList.Bretten)
+    newState.currentEncounter = clone(newState.characterList[groupName])
+
+    this.setState(newState)
+    db.saveCurrentEncounter(newState.currentEncounter)
+  }
+
+  restartEncounter = () => {
+    let newState = clone(this.state)
+    newState.currentEncounter = filter(newState.currentEncounter, (participant) => {return participant.playerName !== 'NPC'})
+    map(newState.currentEncounter, (participant) => {
+      delete participant.initiative
+    })
 
     this.setState(newState)
     db.saveCurrentEncounter(newState.currentEncounter)
@@ -42,6 +54,7 @@ export default class InitiativeToolApp extends PureComponent {
     let newParticipant = {
       name: name,
       playerName: 'NPC',
+      notes: []
     }
 
     let newState = clone(this.state)
@@ -51,13 +64,24 @@ export default class InitiativeToolApp extends PureComponent {
     db.saveCurrentEncounter(newState.currentEncounter)
   }
 
+  clearEncounter = () => {
+    let newState = clone(this.state)
+    newState.currentEncounter = []
+
+    this.setState(newState)
+    db.saveCurrentEncounter(newState.currentEncounter)
+  }
+
   render () {
     return (
       <div className={'initiative-tool-app'}>
-        <InitiativeList currentEncounter={this.state.currentEncounter} startEncounterHandler={this.startEncounter}
-                        addParticipantHandler={this.addParticipant}/>
+        <InitiativeList currentEncounter={this.state.currentEncounter}
+                        restartEncounterHandler={this.restartEncounter}
+                        addParticipantHandler={this.addParticipant}
+                        clearEncounter={this.clearEncounter}/>
         <FlyIn>
-          <CharacterList characterList={this.state.characterList}/>
+          <CharacterList characterList={this.state.characterList}
+                         useCharactersForEncounter={this.useCharactersForEncounter}/>
         </FlyIn>
       </div>
     )

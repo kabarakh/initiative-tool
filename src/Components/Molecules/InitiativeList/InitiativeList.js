@@ -9,8 +9,9 @@ export default class InitiativeList extends PureComponent {
 
   static propTypes = {
     currentEncounter: PropTypes.array.isRequired,
-    startEncounterHandler: PropTypes.func.isRequired,
-    addParticipantHandler: PropTypes.func.isRequired
+    restartEncounterHandler: PropTypes.func.isRequired,
+    addParticipantHandler: PropTypes.func.isRequired,
+    clearEncounter: PropTypes.func.isRequired
   }
 
   render () {
@@ -30,9 +31,11 @@ export default class InitiativeList extends PureComponent {
             <AddParticipant addParticipantHandler={this.props.addParticipantHandler}/>
           </React.Fragment> : ''}
         {this.props.currentEncounter.length === 0 ?
-          <FontAwesomeButton icon={'play'} onClick={this.props.startEncounterHandler}
-                             buttonClassName="button-transparent" size="2x"/>
-          : ''}
+          'Please add a group from the groups list'
+          : <React.Fragment>
+            <FontAwesomeButton icon='sync-alt' onClick={this.props.restartEncounterHandler}/>
+            <FontAwesomeButton icon='trash-alt' onClick={this.props.clearEncounter}/>
+          </React.Fragment>}
       </div>
     )
   }
