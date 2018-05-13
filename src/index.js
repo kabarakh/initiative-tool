@@ -1,11 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import fontawesome from '@fortawesome/fontawesome'
-import faAngleDoubleLeft from '@fortawesome/fontawesome-free-solid/faAngleDoubleLeft'
-import faAngleDoubleRight from '@fortawesome/fontawesome-free-solid/faAngleDoubleRight'
-import faPlus from '@fortawesome/fontawesome-free-solid/faPlus'
-import faCheckSquare from '@fortawesome/fontawesome-free-solid/faCheckSquare'
-import faPlay from '@fortawesome/fontawesome-free-solid/faPlay'
+
+import FontAwesomeLibrary from './Shared/JavaScript/FontAwesomeLibrary/FontAwesomeLibrary'
 
 import './index.css'
 import InitiativeToolApp from './Components/Organisms/App/App'
@@ -43,6 +39,7 @@ const characterList = [
   },
 ]
 
-fontawesome.library.add(faAngleDoubleLeft, faAngleDoubleRight, faPlus, faCheckSquare, faPlay)
+FontAwesomeLibrary.addIcons()
+
 ReactDOM.render(<InitiativeToolApp/>, document.getElementById('initiative-tool'))
 
