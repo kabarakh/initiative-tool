@@ -44,6 +44,5 @@ const characterList = [
 ]
 
 fontawesome.library.add(faAngleDoubleLeft, faAngleDoubleRight, faPlus, faCheckSquare, faPlay)
+ReactDOM.render(<InitiativeToolApp/>, document.getElementById('initiative-tool'))
 
-ReactDOM.render(<InitiativeToolApp
-  characterList={characterList}/>, document.getElementById('initiative-tool'))

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default class Participant extends PureComponent {
 
-  static proptypes = {
+  static propTypes = {
     characterName: PropTypes.string.isRequired,
     playerName: PropTypes.string,
     initiative: PropTypes.number
