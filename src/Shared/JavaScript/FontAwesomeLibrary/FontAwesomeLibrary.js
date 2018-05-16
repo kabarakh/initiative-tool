@@ -8,9 +8,11 @@ import faArrowLeft from '@fortawesome/fontawesome-free-solid/faArrowLeft'
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes'
 import faSyncAlt from '@fortawesome/fontawesome-free-solid/faSyncAlt'
 import faTrashAlt from '@fortawesome/fontawesome-free-solid/faTrashAlt'
+import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown'
+import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft'
 
 const iconList = [
-  faAngleDoubleLeft, faAngleDoubleRight, faPlus, faCheckSquare, faSave, faArrowLeft, faTimes, faSyncAlt, faTrashAlt
+  faAngleDoubleLeft, faAngleDoubleRight, faPlus, faCheckSquare, faSave, faArrowLeft, faTimes, faSyncAlt, faTrashAlt, faChevronDown, faChevronLeft
 ]
 
 export default {

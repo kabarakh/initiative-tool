@@ -1,0 +1,26 @@
+.collapsible {
+  > .collapse-area {
+    > * { // sass-lint:disable-line no-universal-selectors
+      display: none;
+    }
+
+    &::before {
+      display: block;
+      clear: both;
+      height: 0;
+      content: ' ';
+    }
+
+    &.is-open {
+      > * { // sass-lint:disable-line no-universal-selectors
+        display: block;
+      }
+    }
+  }
+
+  .collapsible-button,
+  .collapsible-header {
+    float: left;
+  }
+
+}
