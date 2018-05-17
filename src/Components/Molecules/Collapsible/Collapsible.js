@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton';
 
-import './Collapsible.css';
+import './Collapsible.scss';
 
 export default class Collapsible extends PureComponent {
 

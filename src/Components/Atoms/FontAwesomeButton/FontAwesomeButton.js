@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
-import './FontAwesomeButton.css'
+import './FontAwesomeButton.scss'
 
 export default class FontAwesomeButton extends PureComponent {
 

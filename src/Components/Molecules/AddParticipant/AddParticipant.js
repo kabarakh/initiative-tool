@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton'
 
-import './AddParticipant.css'
+import './AddParticipant.scss'
 
 export default class AddParticipant extends PureComponent {
   static propTypes = {

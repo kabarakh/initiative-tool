@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import FontAwesomeLibrary from './Shared/JavaScript/FontAwesomeLibrary/FontAwesomeLibrary'
 
-import './index.css'
+import './index.scss'
 import InitiativeToolApp from './Components/Organisms/App/App'
 
 import db from './Shared/JavaScript/IndexedDb/IndexedDb'

@@ -20,9 +20,8 @@
 .flyin-button {
   border: 0;
   background: transparent;
-  // we need the vendor prefixes here to get rid of default stylings
-  -webkit-appearance: none; //sass-lint:disable-line no-vendor-prefixes
-  -moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .flyin-collapse-area {

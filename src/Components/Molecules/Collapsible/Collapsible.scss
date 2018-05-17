@@ -1,6 +1,6 @@
 .collapsible {
   > .collapse-area {
-    > * { // sass-lint:disable-line no-universal-selectors
+    > * {
       display: none;
     }
 
@@ -12,7 +12,7 @@
     }
 
     &.is-open {
-      > * { // sass-lint:disable-line no-universal-selectors
+      > * {
         display: block;
       }
     }

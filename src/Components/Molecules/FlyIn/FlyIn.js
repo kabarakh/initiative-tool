@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import './FlyIn.css'
+import './FlyIn.scss'
 
 import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton'
 

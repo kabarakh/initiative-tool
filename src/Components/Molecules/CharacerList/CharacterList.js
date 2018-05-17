@@ -6,7 +6,7 @@ import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton';
 import CharacterListEntry from '../CharacterListEntry/CharacterListEntry';
 import Collapsible from '../Collapsible/Collapsible';
 
-import './CharacterList.css';
+import './CharacterList.scss';
 
 export default class CharacterList extends PureComponent {
 
