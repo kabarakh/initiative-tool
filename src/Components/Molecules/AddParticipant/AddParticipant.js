@@ -52,11 +52,11 @@ export default class AddParticipant extends PureComponent {
     return (
       <div className="add-participant">
         <FontAwesomeButton buttonClassName={this.state.isOpen ? 'hidden' : 'button-transparent'} icon="plus"
-                           onClick={this.toggleState}/>
+          onClick={this.toggleState}/>
         <div className={this.state.isOpen ? 'toggle-area is-open' : 'toggle-area'}>
           <form onSubmit={this.addParticipant}>
             <input type="text" onChange={this.handleNameChange} value={this.state.monsterName}
-                   placeholder="Monster Name"/>
+              placeholder="Monster Name"/>
             <FontAwesomeButton buttonClassName="button-transparent" icon="save" onClick={this.addParticipant}/>
             <FontAwesomeButton buttonClassName="button-transparent" icon="times" onClick={this.reset}/>
           </form>

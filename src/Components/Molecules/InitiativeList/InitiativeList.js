@@ -23,8 +23,8 @@ export default class InitiativeList extends PureComponent {
               {this.props.currentEncounter.map((participant) => {
                 return (
                   <Participant key={participant.name} characterName={participant.name}
-                               playerName={participant.player || 'NPC'}
-                               initiative={participant.initiative || 0}/>
+                    playerName={participant.player || 'NPC'}
+                    initiative={participant.initiative || 0}/>
                 )
               })}
             </ul>

@@ -76,12 +76,12 @@ export default class InitiativeToolApp extends PureComponent {
     return (
       <div className={'initiative-tool-app'}>
         <InitiativeList currentEncounter={this.state.currentEncounter}
-                        restartEncounterHandler={this.restartEncounter}
-                        addParticipantHandler={this.addParticipant}
-                        clearEncounter={this.clearEncounter}/>
+          restartEncounterHandler={this.restartEncounter}
+          addParticipantHandler={this.addParticipant}
+          clearEncounter={this.clearEncounter}/>
         <FlyIn>
           <CharacterList characterList={this.state.characterList}
-                         useCharactersForEncounter={this.useCharactersForEncounter}/>
+            useCharactersForEncounter={this.useCharactersForEncounter}/>
         </FlyIn>
       </div>
     )
