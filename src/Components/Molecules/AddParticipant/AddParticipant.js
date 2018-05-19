@@ -57,8 +57,8 @@ export default class AddParticipant extends PureComponent {
           <form onSubmit={this.addParticipant}>
             <input type="text" onChange={this.handleNameChange} value={this.state.monsterName}
               placeholder="Monster Name"/>
-            <FontAwesomeButton buttonClassName="button-transparent" icon="save" onClick={this.addParticipant}/>
-            <FontAwesomeButton buttonClassName="button-transparent" icon="times" onClick={this.reset}/>
+            <FontAwesomeButton icon="save" onClick={this.addParticipant}/>
+            <FontAwesomeButton icon="times" onClick={this.reset}/>
           </form>
         </div>
       </div>

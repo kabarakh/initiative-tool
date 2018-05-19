@@ -28,8 +28,7 @@ export default class CharacterList extends PureComponent {
                       event.preventDefault()
                       this.props.useCharactersForEncounter(
                         groupName)
-                    }}
-                    buttonClassName="button-transparent"/> {groupName}
+                    }}/> {groupName}
                 </React.Fragment>
               }>
                 <ul>

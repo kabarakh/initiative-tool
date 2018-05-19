@@ -34,7 +34,7 @@ export default class FlyIn extends PureComponent {
     return (
       <div className={classNames}>
         <div className='flyin-button-area'>
-          <FontAwesomeButton buttonClassName="button-transparent" onClick={this.toggleState} icon={faIcon} size="2x"/>
+          <FontAwesomeButton onClick={this.toggleState} icon={faIcon} size="2x"/>
         </div>
         <div className='flyin-collapse-area'>{this.props.children}</div>
       </div>

@@ -26,6 +26,10 @@ export default class FontAwesomeButton extends PureComponent {
     buttonClassName: PropTypes.string
   }
 
+  static defaultProps = {
+    buttonClassName: 'button-transparent'
+  }
+
   render () {
     return (
       <button onClick={this.props.onClick} type="button"

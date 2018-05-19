@@ -11,7 +11,10 @@ export default class InitiativeList extends PureComponent {
     currentEncounter: PropTypes.array.isRequired,
     restartEncounterHandler: PropTypes.func.isRequired,
     addParticipantHandler: PropTypes.func.isRequired,
-    clearEncounter: PropTypes.func.isRequired
+    removeParticipantHandler: PropTypes.func.isRequired,
+    clearEncounter: PropTypes.func.isRequired,
+    initiativeMode: PropTypes.oneOf(['prepare', 'inCombat']),
+    currentRound: PropTypes.number
   }
 
   render () {
@@ -22,7 +25,7 @@ export default class InitiativeList extends PureComponent {
             <ul>
               {this.props.currentEncounter.map((participant) => {
                 return (
-                  <Participant key={participant.name} characterName={participant.name}
+                  <Participant removeParticipantHandler={this.props.removeParticipantHandler} key={participant.name} characterName={participant.name}
                     playerName={participant.player || 'NPC'}
                     initiative={participant.initiative || 0}/>
                 )

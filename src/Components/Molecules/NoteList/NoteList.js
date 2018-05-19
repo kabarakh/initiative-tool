@@ -31,7 +31,7 @@ export default class NoteList extends PureComponent {
         </ul>
         <textarea rows="4" onChange={this.updateNoteTitle}/>
         <input type="text" onChange={this.updateNoteText}/>
-        <FontAwesomeButton buttonClassName="button-transparent" icon={'plus'} onClick={this.addNote}/>
+        <FontAwesomeButton icon={'plus'} onClick={this.addNote}/>
       </React.Fragment>
     )
   }
