@@ -13,22 +13,13 @@ export default class AddParticipant extends PureComponent {
   constructor (props) {
     super(props)
     this.state = {
-      isOpen: props.isOpen,
       monsterName: ''
     }
-  }
-
-  toggleState = () => {
-    this.setState({
-      isOpen: !this.state.isOpen,
-      monsterName: this.state.monsterName
-    })
   }
 
   reset = (event) => {
     event.preventDefault()
     this.setState({
-      isOpen: this.props.isOpen,
       monsterName: ''
     })
   }
@@ -36,7 +27,6 @@ export default class AddParticipant extends PureComponent {
   handleNameChange = (event) => {
     this.setState({
       monsterName: event.target.value,
-      isOpen: this.state.isOpen
     })
   }
 
@@ -51,16 +41,11 @@ export default class AddParticipant extends PureComponent {
   render () {
     return (
       <div className="add-participant">
-        <FontAwesomeButton buttonClassName={this.state.isOpen ? 'hidden' : 'button-transparent'} icon="plus"
-          onClick={this.toggleState}/>
-        <div className={this.state.isOpen ? 'toggle-area is-open' : 'toggle-area'}>
-          <form onSubmit={this.addParticipant}>
-            <input type="text" onChange={this.handleNameChange} value={this.state.monsterName}
-              placeholder="Monster Name"/>
-            <FontAwesomeButton icon="save" onClick={this.addParticipant}/>
-            <FontAwesomeButton icon="times" onClick={this.reset}/>
-          </form>
-        </div>
+        <form onSubmit={this.addParticipant}>
+          <input type="text" onChange={this.handleNameChange} value={this.state.monsterName}
+                 placeholder="Monster Name"/>
+          <FontAwesomeButton icon="plus" onClick={this.addParticipant}/>
+        </form>
       </div>
     )
   }
