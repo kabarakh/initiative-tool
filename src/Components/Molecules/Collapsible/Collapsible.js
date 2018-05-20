@@ -32,8 +32,8 @@ export default class Collapsible extends PureComponent {
           {this.props.header}
         </div>
         <FontAwesomeButton buttonClassName='collapsible-button button-transparent'
-          icon={this.state.isOpen ? 'chevron-down' : 'chevron-left'}
-          onClick={this.toggleState}/>
+                           icon={this.state.isOpen ? 'chevron-down' : 'chevron-left'}
+                           onClick={this.toggleState}/>
         <div className={this.state.isOpen ? 'is-open collapse-area' : 'collapse-area'}>
           {this.props.children}
         </div>

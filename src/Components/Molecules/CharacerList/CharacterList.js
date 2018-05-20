@@ -24,17 +24,17 @@ export default class CharacterList extends PureComponent {
               <Collapsible header={
                 <React.Fragment>
                   <FontAwesomeButton icon={'arrow-left'}
-                    onClick={(event) => {
-                      event.preventDefault()
-                      this.props.useCharactersForEncounter(
-                        groupName)
-                    }}/> {groupName}
+                                     onClick={(event) => {
+                                       event.preventDefault()
+                                       this.props.useCharactersForEncounter(
+                                         groupName)
+                                     }}/> {groupName}
                 </React.Fragment>
               }>
                 <ul>
                   {group.map((characterEntry) => {
                     return <CharacterListEntry character={characterEntry}
-                      key={characterEntry.name}/>
+                                               key={characterEntry.name}/>
                   })}
                 </ul>
               </Collapsible>
