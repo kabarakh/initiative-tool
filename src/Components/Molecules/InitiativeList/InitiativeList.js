@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import map from 'lodash.map'
 
-import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton'
-import Participant from '../Participant/Participant'
-import AddParticipant from '../AddParticipant/AddParticipant'
+import EncounterList from './EncounterList'
+import NoParticipants from './NoParticipants'
+import PrepareInitiative from './PrepareInitiative'
 
 export default class InitiativeList extends PureComponent {
 
@@ -33,27 +33,14 @@ export default class InitiativeList extends PureComponent {
   render () {
     return (
       <div className="initiative-list">
-        {this.props.currentEncounter.length ?
-          <React.Fragment>
-            <ul>
-              {this.props.currentEncounter.map((participant) => {
-                return (
-                  <Participant removeParticipantHandler={this.props.removeParticipantHandler} key={participant.name}
-                               characterName={participant.name}
-                               playerName={participant.player || 'NPC'}
-                               initiative={participant.initiative || 0}
-                               changeInitiativeHandler={(event) => {this.setInitiativeForCharacter(event.target.value, participant)}}/>
-                )
-              })}
-            </ul>
-            <AddParticipant addParticipantHandler={this.props.addParticipantHandler}/>
-          </React.Fragment> : ''}
-        {this.props.currentEncounter.length === 0 ?
-          'Please add a group from the groups list'
-          : <React.Fragment>
-            <FontAwesomeButton icon='sync-alt' onClick={this.props.restartEncounterHandler}/>
-            <FontAwesomeButton icon='trash-alt' onClick={this.props.clearEncounter}/>
-          </React.Fragment>}
+        {this.props.currentEncounter.length ? (this.props.initiativeMode === 'prepare' ? (
+                <PrepareInitiative currentEncounter={this.props.currentEncounter}/>
+            ) : (
+                <EncounterList />
+            )) : (
+                <NoParticipants/>
+            )
+        }
       </div>
     )
   }
