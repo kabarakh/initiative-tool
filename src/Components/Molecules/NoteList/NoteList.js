@@ -21,7 +21,7 @@ export default class NoteList extends PureComponent {
 
   }
 
-  render () {
+  render() {
     return (
       <React.Fragment>
         <ul>
@@ -29,9 +29,9 @@ export default class NoteList extends PureComponent {
             return 'a note'
           })}
         </ul>
-        <textarea rows="4" onChange={this.updateNoteTitle}/>
-        <input type="text" onChange={this.updateNoteText}/>
-        <FontAwesomeButton icon={'plus'} onClick={this.addNote}/>
+        <textarea rows="4" onChange={this.updateNoteTitle} />
+        <input type="text" onChange={this.updateNoteText} />
+        <FontAwesomeButton icon={'plus'} onClick={this.addNote} />
       </React.Fragment>
     )
   }

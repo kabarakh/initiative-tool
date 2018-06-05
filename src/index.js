@@ -104,5 +104,5 @@ map(characterList, (characters, group) => {
 
 FontAwesomeLibrary.addIcons()
 
-ReactDOM.render(<InitiativeToolApp/>, document.getElementById('initiative-tool'))
+ReactDOM.render(<InitiativeToolApp />, document.getElementById('initiative-tool'))
 

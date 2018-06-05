@@ -1,5 +1,4 @@
 @import '../../../Shared/Styles/Variables';
-
 .flyin {
   display: grid;
   position: fixed;
@@ -11,7 +10,6 @@
   grid-template-columns: 40px 1fr;
   grid-gap: 10px;
   overflow-y: auto;
-
   &.is-open {
     right: 0;
   }

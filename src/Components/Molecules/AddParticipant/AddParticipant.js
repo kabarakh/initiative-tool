@@ -10,7 +10,7 @@ export default class AddParticipant extends PureComponent {
     isOpen: PropTypes.bool
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       monsterName: ''
@@ -38,13 +38,13 @@ export default class AddParticipant extends PureComponent {
     }
   }
 
-  render () {
+  render() {
     return (
       <div className="add-participant">
         <form onSubmit={this.addParticipant}>
           <input type="text" onChange={this.handleNameChange} value={this.state.monsterName}
-                 placeholder="Monster Name"/>
-          <FontAwesomeButton icon="plus" onClick={this.addParticipant}/>
+            placeholder="Monster Name" />
+          <FontAwesomeButton icon="plus" onClick={this.addParticipant} />
         </form>
       </div>
     )

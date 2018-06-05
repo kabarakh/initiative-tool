@@ -9,11 +9,11 @@ export default class CharacterListEntry extends PureComponent {
     character: PropTypes.object.isRequired
   }
 
-  render () {
+  render() {
     return (
       <li>
         {this.props.character.name} ({this.props.character.player})
-        <NoteList notes={this.props.character.notes}/>
+        <NoteList notes={this.props.character.notes} />
       </li>
     )
   };

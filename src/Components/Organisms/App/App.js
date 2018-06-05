@@ -10,7 +10,7 @@ import db from './../../../Shared/JavaScript/IndexedDb/IndexedDb'
 
 export default class InitiativeToolApp extends PureComponent {
 
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -19,7 +19,7 @@ export default class InitiativeToolApp extends PureComponent {
     }
   }
 
-  async componentWillMount () {
+  async componentWillMount() {
     let newState = await this.loadState()
     this.setState(newState)
   }
@@ -34,7 +34,7 @@ export default class InitiativeToolApp extends PureComponent {
   useCharactersForEncounter = (groupName) => {
     let newState = clone(this.state)
     newState.currentEncounter = clone(newState.characterList[groupName])
-      newState.initiativeMode = 'prepare'
+    newState.initiativeMode = 'prepare'
 
     this.setState(newState)
     db.saveCurrentEncounter(newState.currentEncounter)
@@ -42,11 +42,11 @@ export default class InitiativeToolApp extends PureComponent {
 
   restartEncounter = () => {
     let newState = clone(this.state)
-    newState.currentEncounter = filter(newState.currentEncounter, (participant) => {return participant.playerName !== 'NPC'})
+    newState.currentEncounter = filter(newState.currentEncounter, (participant) => { return participant.playerName !== 'NPC' })
     map(newState.currentEncounter, (participant) => {
       delete participant.initiative
     })
-      newState.initiativeMode = 'prepare'
+    newState.initiativeMode = 'prepare'
 
     this.setState(newState)
     db.saveCurrentEncounter(newState.currentEncounter)
@@ -68,7 +68,7 @@ export default class InitiativeToolApp extends PureComponent {
 
   removeParticipant = (name) => {
     let newState = clone(this.state)
-    newState.currentEncounter = filter(newState.currentEncounter, (object) => {return object.name !== name})
+    newState.currentEncounter = filter(newState.currentEncounter, (object) => { return object.name !== name })
 
     this.setState(newState)
     db.saveCurrentEncounter(newState.currentEncounter)
@@ -86,20 +86,20 @@ export default class InitiativeToolApp extends PureComponent {
     db.saveCurrentEncounter(newState.currentEncounter)
   }
 
-  render () {
+  render() {
     return (
       <div className={'initiative-tool-app'}>
         <InitiativeList currentEncounter={this.state.currentEncounter}
-                        restartEncounterHandler={this.restartEncounter}
-                        addParticipantHandler={this.addParticipant}
-                        clearEncounter={this.clearEncounter}
-                        removeParticipantHandler={this.removeParticipant}
-                        updateParticipants={this.updateEncounter}
-        initiativeMode={this.state.initiativeMode}
+          restartEncounterHandler={this.restartEncounter}
+          addParticipantHandler={this.addParticipant}
+          clearEncounter={this.clearEncounter}
+          removeParticipantHandler={this.removeParticipant}
+          updateParticipants={this.updateEncounter}
+          initiativeMode={this.state.initiativeMode}
         />
         <FlyIn>
           <CharacterList characterList={this.state.characterList}
-                         useCharactersForEncounter={this.useCharactersForEncounter}/>
+            useCharactersForEncounter={this.useCharactersForEncounter} />
         </FlyIn>
       </div>
     )

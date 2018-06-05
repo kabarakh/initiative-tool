@@ -12,7 +12,17 @@ import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown'
 import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft'
 
 const iconList = [
-  faAngleDoubleLeft, faAngleDoubleRight, faPlus, faCheckSquare, faSave, faArrowLeft, faTimes, faSyncAlt, faTrashAlt, faChevronDown, faChevronLeft
+  faAngleDoubleLeft,
+  faAngleDoubleRight,
+  faPlus,
+  faCheckSquare,
+  faSave,
+  faArrowLeft,
+  faTimes,
+  faSyncAlt,
+  faTrashAlt,
+  faChevronDown,
+  faChevronLeft
 ]
 
 export default {

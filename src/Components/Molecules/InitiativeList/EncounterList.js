@@ -8,13 +8,11 @@ import AddParticipant from '../AddParticipant/AddParticipant'
 
 export default class InitiativeList extends PureComponent {
 
-
-  render () {
+  render() {
     return (
       <div>
         EncounterList
       </div>
     )
   }
-
 }

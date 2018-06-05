@@ -30,24 +30,24 @@ export default class InitiativeList extends PureComponent {
     this.props.updateParticipants(encounterParticipants)
   }
 
-  render () {
+  render() {
     return (
-          <React.Fragment>
-            <ul>
-              {this.props.currentEncounter.map((participant) => {
-                return (
-                  <Participant removeParticipantHandler={this.props.removeParticipantHandler} key={participant.name}
-                               characterName={participant.name}
-                               playerName={participant.player || 'NPC'}
-                               initiative={participant.initiative || 0}
-                               changeInitiativeHandler={(event) => {this.setInitiativeForCharacter(event.target.value, participant)}}/>
-                )
-              })}
-            </ul>
-            <AddParticipant addParticipantHandler={this.props.addParticipantHandler}/>
-            <FontAwesomeButton icon='sync-alt' onClick={this.props.restartEncounterHandler}/>
-            <FontAwesomeButton icon='trash-alt' onClick={this.props.clearEncounter}/>
-          </React.Fragment>
+      <React.Fragment>
+        <ul>
+          {this.props.currentEncounter.map((participant) => {
+            return (
+              <Participant removeParticipantHandler={this.props.removeParticipantHandler} key={participant.name}
+                characterName={participant.name}
+                playerName={participant.player || 'NPC'}
+                initiative={participant.initiative || 0}
+                changeInitiativeHandler={(event) => { this.setInitiativeForCharacter(event.target.value, participant) }} />
+            )
+          })}
+        </ul>
+        <AddParticipant addParticipantHandler={this.props.addParticipantHandler} />
+        <FontAwesomeButton icon='sync-alt' onClick={this.props.restartEncounterHandler} />
+        <FontAwesomeButton icon='trash-alt' onClick={this.props.clearEncounter} />
+      </React.Fragment>
     )
   }
 

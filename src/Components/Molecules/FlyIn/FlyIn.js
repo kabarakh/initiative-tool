@@ -13,7 +13,7 @@ export default class FlyIn extends PureComponent {
     isOpen: PropTypes.bool,
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -27,14 +27,14 @@ export default class FlyIn extends PureComponent {
     })
   }
 
-  render () {
-    const classNames = classnames('flyin', {'is-open': this.state.isOpen})
+  render() {
+    const classNames = classnames('flyin', { 'is-open': this.state.isOpen })
     const faIcon = this.state.isOpen ? 'angle-double-right' : 'angle-double-left'
 
     return (
       <div className={classNames}>
         <div className='flyin-button-area'>
-          <FontAwesomeButton onClick={this.toggleState} icon={faIcon} size="2x"/>
+          <FontAwesomeButton onClick={this.toggleState} icon={faIcon} size="2x" />
         </div>
         <div className='flyin-collapse-area'>{this.props.children}</div>
       </div>

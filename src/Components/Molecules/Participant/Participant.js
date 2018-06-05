@@ -12,18 +12,18 @@ export default class Participant extends PureComponent {
     changeInitiativeHandler: PropTypes.func.isRequired
   }
 
-  render () {
+  render() {
     return (
       <li>
         {this.props.characterName} ({this.props.playerName})
         <input type="text" onChange={this.props.changeInitiativeHandler}
-               placeholder="Initiative" value={this.props.initiative}/>
+          placeholder="Initiative" value={this.props.initiative} />
         {
           this.props.playerName === 'NPC'
             ? <FontAwesomeButton icon='trash-alt' onClick={(event) => {
               event.preventDefault()
               this.props.removeParticipantHandler(this.props.characterName)
-            }}/>
+            }} />
             : ''
         }
       </li>

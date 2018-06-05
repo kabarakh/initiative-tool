@@ -1,26 +1,22 @@
 .collapsible {
-  > .collapse-area {
-    > * {
+  >.collapse-area {
+    >* {
       display: none;
     }
-
     &::before {
       display: block;
       clear: both;
       height: 0;
       content: ' ';
     }
-
     &.is-open {
-      > * {
+      >* {
         display: block;
       }
     }
   }
-
   .collapsible-button,
   .collapsible-header {
     float: left;
   }
-
 }

@@ -30,16 +30,16 @@ export default class InitiativeList extends PureComponent {
     this.props.updateParticipants(encounterParticipants)
   }
 
-  render () {
+  render() {
     return (
       <div className="initiative-list">
         {this.props.currentEncounter.length ? (this.props.initiativeMode === 'prepare' ? (
-                <PrepareInitiative currentEncounter={this.props.currentEncounter}/>
-            ) : (
-                <EncounterList />
-            )) : (
-                <NoParticipants/>
-            )
+          <PrepareInitiative currentEncounter={this.props.currentEncounter} />
+        ) : (
+            <EncounterList />
+          )) : (
+            <NoParticipants />
+          )
         }
       </div>
     )

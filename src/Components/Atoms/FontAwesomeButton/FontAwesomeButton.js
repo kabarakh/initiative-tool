@@ -30,15 +30,15 @@ export default class FontAwesomeButton extends PureComponent {
     buttonClassName: 'button-transparent'
   }
 
-  render () {
+  render() {
     return (
       <button onClick={this.props.onClick} type="button"
-              className={this.props.buttonClassName}>
+        className={this.props.buttonClassName}>
         <FontAwesomeIcon border={this.props.border} className={this.props.className} mask={this.props.mask}
-                         fixedWidth={this.props.fixedWidth} flip={this.props.flip} icon={this.props.icon}
-                         listItem={this.props.listItem} pull={this.props.pull} pulse={this.props.pulse}
-                         name={this.props.name} rotation={this.props.rotation} size={this.props.size}
-                         spin={this.props.spin} symbol={this.props.symbol} transform={this.props.transform}/>
+          fixedWidth={this.props.fixedWidth} flip={this.props.flip} icon={this.props.icon}
+          listItem={this.props.listItem} pull={this.props.pull} pulse={this.props.pulse}
+          name={this.props.name} rotation={this.props.rotation} size={this.props.size}
+          spin={this.props.spin} symbol={this.props.symbol} transform={this.props.transform} />
       </button>
     )
   }
