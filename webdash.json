@@ -1,8 +1,8 @@
 {
     "src": "./src/",
-    "dist": "./dist/",
+    "dist": "./build/",
     "jsBudgetLimit": 200,
-    "jsBudgetPath": "./dist/*.js",
+    "jsBudgetPath": "./build/*.js",
     "manifestPath": "./src/manifest.json",
     "readableAssets": {
         "./src/assets/": "/assets/"

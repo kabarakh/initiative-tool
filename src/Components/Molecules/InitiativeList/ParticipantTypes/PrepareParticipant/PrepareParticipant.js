@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton'
+import FontAwesomeButton from '../../../../Atoms/FontAwesomeButton/FontAwesomeButton'
 
-export default class Participant extends PureComponent {
+export default class PrepareParticipant extends PureComponent {
 
   static propTypes = {
     characterName: PropTypes.string.isRequired,

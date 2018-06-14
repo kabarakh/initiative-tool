@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-export default class InitiativeList extends PureComponent {
+export default class NoParticipants extends PureComponent {
 
   render() {
     return (

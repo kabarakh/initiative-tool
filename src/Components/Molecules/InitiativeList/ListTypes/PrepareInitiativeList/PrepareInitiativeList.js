@@ -2,11 +2,11 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import map from 'lodash.map'
 
-import FontAwesomeButton from '../../Atoms/FontAwesomeButton/FontAwesomeButton'
-import Participant from '../Participant/Participant'
-import AddParticipant from '../AddParticipant/AddParticipant'
+import FontAwesomeButton from '../../../../Atoms/FontAwesomeButton/FontAwesomeButton'
+import PrepareParticipant from '../../ParticipantTypes/PrepareParticipant/PrepareParticipant'
+import AddParticipant from '../../../AddParticipant/AddParticipant'
 
-export default class InitiativeList extends PureComponent {
+export default class PrepareInitiativeList extends PureComponent {
 
   static propTypes = {
     currentEncounter: PropTypes.array.isRequired,
@@ -36,7 +36,7 @@ export default class InitiativeList extends PureComponent {
         <ul>
           {this.props.currentEncounter.map((participant) => {
             return (
-              <Participant removeParticipantHandler={this.props.removeParticipantHandler} key={participant.name}
+              <PrepareParticipant removeParticipantHandler={this.props.removeParticipantHandler} key={participant.name}
                 characterName={participant.name}
                 playerName={participant.player || 'NPC'}
                 initiative={participant.initiative || 0}
